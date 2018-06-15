@@ -1,26 +1,29 @@
 pragma solidity ^0.4.24;
 
 contract Supply {
-	struct Invoice {
-		string id;
-		string productLot;
+	struct Lot {
+		string invoiceId;
+		string lot;
 		string description;
 	}
 
-	Invoice[] public invoices;
-
+	Lot[] public lots;
 
 	constructor() public {}
 
-	function addInvoice() public pure {
-
+	function addLot(string id, string lot, string descr) public {
+		lots.push(Lot(id, lot, descr));
+		return;
 	}
 
-	function getCountInvoices() public pure {
-
+	function getCountLots() public view returns (uint256) {
+		return lots.length;
 	}
 
-	function getInvoice() public pure {
-
+	function getLot(uint256 index) public view returns (string, string, string) {
+		return (
+			lots[index].invoiceId,
+			lots[index].lot,
+			lots[index].description);
 	}
 }
