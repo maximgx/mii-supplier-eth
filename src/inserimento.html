@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h1>Form Fatture</h1>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="./inserimento.js"></script>
+    </head>
+<body>
+<p>
+    http://www.fatturapa.gov.it/export/fatturazione/sdi/Specifiche_tecniche_del_formato_FatturaPA_v1.2.1.pdf
+    riferimento campi
+</p>
+
+<form action="/elaborazione.js">
+  <fieldset>
+    <legend>IDTrasmittente</legend>
+    Codice Paese:<br>
+    <input type="text" name="idpaese">
+    <br>
+    Codice fiscale:<br>
+    <input type="text" name="idcodice">
+    <br>
+    Progressivo invio:<br>
+    <input type="number" name="progressivoinvio">
+    <br>
+    Formato di trasmissione:<br>
+    <input type="text" name="formatotrasmissione">
+    <br>
+    Codice Destinatario:<br>
+    <input type="text" name="codicedestinatario"> 
+    <br>
+  </fieldset>
+  <br><br>
+  <fieldset>
+    <legend>Trasmittente</legend>
+      Telefono:<br>
+      <input type="number" name="telefonotrasmittente">
+      <br>
+      E-mail:<br>
+      <input type="text" name="emailtrasmittente">
+      <br>
+  </fieldset>
+  <br><br>
+  <fieldset>
+    <legend>Cedente/Prestatore</legend>
+    <br>
+    <fieldset>
+      <legend>Identificativo fiscale Iva</legend>
+      Codice paese:<br>
+      <input type="text" name="codicepaeseiva">
+      <br>
+      Identificatore fiscale cedente (partita Iva):<br>
+      <input type="text" name="partitaivacedente">
+      <br>
+    </fieldset>
+
+    <fieldset>
+      <legend>Anagrafica</legend>
+      Denominazione:<br>
+      <input type="text" name="denominazionecedente">
+      <br>
+      Regime fiscale:<br>
+      <input type="text" name="regimefiscale">
+      <br>
+    </fieldset>
+
+    <fieldset>
+      <legend>Sede</legend>
+      Indirizzo:<br>
+      <input type="text" name="indirizzosede">
+      <br>
+      CAP:<br>
+      <input type="number" name="capsede">
+      <br>
+      Comune:<br>
+      <input type="text" name="comunesede">
+      <br>
+      Provincia:<br>
+      <input type="text" name="provinciasede">
+      <br>
+      Nazione:<br>
+      <input type="text" name="nazionesede">
+      <br>
+    </fieldset>
+
+    <fieldset>
+      <legend>Stabile Organizzazione</legend>
+      Indirizzo:<br>
+      <input type="text" name="indirizzostabile">
+      <br>
+      CAP:<br>
+      <input type="number" name="capstabile">
+      <br>
+      Comune:<br>
+      <input type="text" name="comunestabile">
+      <br>
+      Provincia:<br>
+      <input type="text" name="provinciastabile">
+      <br>
+      Nazione:<br>
+      <input type="text" name="nazionestabile">
+      <br>
+    </fieldset>
+  </fieldset>
+  <br><br>
+  <fieldset>
+    <legend>Committente</legend>
+      <fieldset>
+        <legend>Anagrafica</legend>
+        Codice fiscale:<br>
+        <input type="text" name="codicefiscalecommit">
+        <br>
+        Denominazione:<br>
+        <input type="text" name="denominazionecommit">
+        <br>  
+      </fieldset>
+      <fieldset>
+        <legend>Sede</legend>
+        Indirizzo:<br>
+        <input type="text" name="indirizzosedecommit">
+        <br>
+        CAP:<br>
+        <input type="number" name="capsedecommit">
+        <br>
+        Comune:<br>
+        <input type="text" name="comunesedecommit">
+        <br>
+        Provincia:<br>
+        <input type="text" name="provinciasedecommit">
+        <br>
+        Nazione:<br>
+        <input type="text" name="nazionesedecommit">
+        <br>
+      </fieldset>
+  </fieldset>
+  <br>
+  <fieldset>
+    <legend>Dati generali</legend>
+    Tipo documento:<br>
+    <input type="text" name="tipodoc">
+    <br>
+    Divisa (valuta utilizzata):<br>
+    <input type="text" name="valuta">
+    <br>
+    Data:<br>
+    <input type="date" name="datafatt">
+    <br>
+    Numero fattura:<br>
+    <input type="number" name="numfattura">
+    <br>
+    Art 73 (indicare Si o No):<br>
+    <input type="text" name="art73">
+    <br>
+  </fieldset>
+  <br>
+  <fieldset>
+    <legend>Committente</legend>
+    <fieldset>
+      <legend>Anagrafica</legend>
+    </fieldset>
+    <br>
+    <fieldset>
+      <legends>Dati generali</legends>
+      Tipo documento:<br>
+      <input type="text" name="tipodoc">
+      <br>
+      Divisa (valuta utilizzata):<br>
+      <input type="text" name="valuta">
+      <br>
+      Data:<br>
+      <input type="date" name="datafatt">
+      <br>
+      Numero fattura:<br>
+      <input type="number" name="numfattura">
+      <br>
+      Art 73 (indicare Si o No):<br>
+      <input type="text" name="art73">
+      <br><br>
+      Dati beni e servizi: <br>
+      <div class="container">
+        <table id="product-table" class=" table order-list">
+        <thead>
+            <tr>
+                <td>Descrizione</td>
+                <td>Prezzo unitario</td>
+                <td>Prezzo totale</td>
+                <td>Aliquota (iva)</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="col-sm-4">
+                    <input type="text" name="descrizione" class="form-control" />
+                </td>
+                <td class="col-sm-2">
+                    <input type="number" name="prezzounit"  class="form-control"/>
+                </td>
+                <td class="col-sm-2">
+                    <input type="number" name="prezzotot"  class="form-control"/>
+                </td>
+                <td class="col-sm-2">
+                  <input type="number" name="aliquota"  class="form-control"/>
+                </td>
+                <td class="col-sm-2"><a class="deleteRow"></a>  
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="5" style="text-align: left;">
+                    <input type="button" class="btn btn-lg btn-block " id="addrow" value="Add Row" />
+                </td>
+            </tr>
+            <tr>
+            </tr>
+        </tfoot>
+    </table>
+
+    </fieldset>
+  </fieldset>
+
+   
+  <input type="submit" value="Invia">
+</form> 
+
+</body>
+</html>
