@@ -5,6 +5,7 @@
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
         <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
         <script src="./inserimento.js"></script>
+        <script src="elaborazione.js"></script>
     </head>
 <body>
 <p>
@@ -14,188 +15,426 @@
 
 <form action="/elaborazione.js">
   <fieldset>
-    <legend>IDTrasmittente</legend>
-    Codice Paese:<br>
-    <input type="text" name="idpaese">
+    <legend>DatiTrasmissione</legend>
+    <fieldset>
+      <legend>IDTrasmittente</legend>
+      Id Paese:<br>
+      <input type="text" name="IDPaese">
+      <br>
+      Id Codice:<br>
+      <input type="text" name="IDCodice">
+      <br>
+    </fieldset>
     <br>
-    Codice fiscale:<br>
-    <input type="text" name="idcodice">
+    Progressivo Invio:<br>
+    <input type="text" name="ProgressivoInvio">
     <br>
-    Progressivo invio:<br>
-    <input type="number" name="progressivoinvio">
+    Formato di Trasmissione:<br>
+    <input type="text" name="FormatoDiTrasmissione">
     <br>
-    Formato di trasmissione:<br>
-    <input type="text" name="formatotrasmissione">
+    <input type="text" name="CodiceDestinatario">
     <br>
-    Codice Destinatario:<br>
-    <input type="text" name="codicedestinatario"> 
+    <fieldset>
+      <legend>ContattiTrasmittente</legend>
+      <input type="text" name="Telefono">
+      <br>
+      <input type="text" name="Email">
+      <br>
+    </fieldset>
+    <input type="text" name="PECDestinatario">
     <br>
   </fieldset>
-  <br><br>
+  <br>
   <fieldset>
-    <legend>Trasmittente</legend>
-      Telefono:<br>
-      <input type="number" name="telefonotrasmittente">
-      <br>
-      E-mail:<br>
-      <input type="text" name="emailtrasmittente">
-      <br>
-  </fieldset>
-  <br><br>
-  <fieldset>
-    <legend>Cedente/Prestatore</legend>
-    <br>
+    <legend>CedentePrestatore</legend>
     <fieldset>
-      <legend>Identificativo fiscale Iva</legend>
-      Codice paese:<br>
-      <input type="text" name="codicepaeseiva">
+      <legend>DatiAnagrafici</legend>
+      <fieldset>
+        <legend>IDFiscaleIva</legend>
+        <input type="text" name="IDPaese">
+        <br>
+        <input type="text" name="IDCodice">
+        <br>
+      </fieldset>
+      <input type="text" name="CodiceFiscale">
       <br>
-      Identificatore fiscale cedente (partita Iva):<br>
-      <input type="text" name="partitaivacedente">
-      <br>
-    </fieldset>
-
-    <fieldset>
-      <legend>Anagrafica</legend>
-      Denominazione:<br>
-      <input type="text" name="denominazionecedente">
-      <br>
-      Regime fiscale:<br>
-      <input type="text" name="regimefiscale">
-      <br>
-    </fieldset>
-
-    <fieldset>
-      <legend>Sede</legend>
-      Indirizzo:<br>
-      <input type="text" name="indirizzosede">
-      <br>
-      CAP:<br>
-      <input type="number" name="capsede">
-      <br>
-      Comune:<br>
-      <input type="text" name="comunesede">
-      <br>
-      Provincia:<br>
-      <input type="text" name="provinciasede">
-      <br>
-      Nazione:<br>
-      <input type="text" name="nazionesede">
-      <br>
-    </fieldset>
-
-    <fieldset>
-      <legend>Stabile Organizzazione</legend>
-      Indirizzo:<br>
-      <input type="text" name="indirizzostabile">
-      <br>
-      CAP:<br>
-      <input type="number" name="capstabile">
-      <br>
-      Comune:<br>
-      <input type="text" name="comunestabile">
-      <br>
-      Provincia:<br>
-      <input type="text" name="provinciastabile">
-      <br>
-      Nazione:<br>
-      <input type="text" name="nazionestabile">
-      <br>
-    </fieldset>
-  </fieldset>
-  <br><br>
-  <fieldset>
-    <legend>Committente</legend>
       <fieldset>
         <legend>Anagrafica</legend>
-        Codice fiscale:<br>
-        <input type="text" name="codicefiscalecommit">
+        <input type="text" name="Denominazione">
         <br>
-        Denominazione:<br>
-        <input type="text" name="denominazionecommit">
-        <br>  
-      </fieldset>
-      <fieldset>
-        <legend>Sede</legend>
-        Indirizzo:<br>
-        <input type="text" name="indirizzosedecommit">
+        <input type="text" name="Nome">
         <br>
-        CAP:<br>
-        <input type="number" name="capsedecommit">
+        <input type="text" name="Cognome">
         <br>
-        Comune:<br>
-        <input type="text" name="comunesedecommit">
+        <input type="text" name="Titolo">
         <br>
-        Provincia:<br>
-        <input type="text" name="provinciasedecommit">
-        <br>
-        Nazione:<br>
-        <input type="text" name="nazionesedecommit">
+        <input type="text" name="CodEORI">
         <br>
       </fieldset>
+      <input type="text" name="AlboProfessionale">
+      <br>
+      <input type="text" name="ProvinciaAlbo">
+      <br>
+      <input type="text" name="NumeroIscrizioneAlbo">
+      <br>
+      <input type="date" name="DataIscrizioneAlbo">
+      <br>
+      <input type="text" name="RegimeFiscale">
+      <br>
+    </fieldset>
+    <br>
+    <fieldset>
+      <legend>Sede</legend>
+      <input type="text" name="Indirizzo">
+      <br>
+      <input type="text" name="NumeroCivico">
+      <br>
+      <input type="number" name="CAP">
+      <br>
+      <input type="text" name="Comune">
+      <br>
+      <input type="text" name="Provincia">
+      <br>
+      <input type="text" name="Nazione">
+      <br>
+    </fieldset>
+    <br>
+    <fieldset>
+      <legend>StabileOrganizzazione</legend>
+      <input type="text" name="Indirizzo">
+      <br>
+      <input type="text" name="NumeroCivico">
+      <br>
+      <input type="number" name="CAP">
+      <br>
+      <input type="text" name="Comune">
+      <br>
+      <input type="text" name="Provincia">
+      <br>
+      <input type="text" name="Nazione">
+      <br>
+    </fieldset>
+    <br>
+    <fieldset>
+      <legend>IscrizioneREA</legend>
+      <input type="text" name="Ufficio">
+      <br>
+      <input type="text" name="NumeroREA">
+      <br>
+      <input type="number" name="CapitaleSociale">
+      <br>
+      <input type="text" name="SocioUnico">
+      <br>
+      <input type="text" name="StatoLiquidazione">
+      <br>
+    </fieldset>
+    <br>
+    <fieldset>
+      <legend>Contatti</legend>
+      <input type="text" name="Telefon">
+      <br>
+      <input type="text" name="Fax">
+      <br>
+      <input type="text" name="Email">
+      <br>
+    </fieldset>
+    <br>
+    <input type="text" name="RiferimentoAllaPubblicaAmministrazione">
+    <br>
   </fieldset>
   <br>
   <fieldset>
-    <legend>Dati generali</legend>
-    Tipo documento:<br>
-    <input type="text" name="tipodoc">
-    <br>
-    Divisa (valuta utilizzata):<br>
-    <input type="text" name="valuta">
-    <br>
-    Data:<br>
-    <input type="date" name="datafatt">
-    <br>
-    Numero fattura:<br>
-    <input type="number" name="numfattura">
-    <br>
-    Art 73 (indicare Si o No):<br>
-    <input type="text" name="art73">
+    <legend>RappresentanteFiscale</legend>
+    <fieldset>
+      <legend>DatiAnagrafici</legend>
+      <fieldset>
+        <legend>IDFiscaleIva</legend>
+        <input type="text" name="IDPaese">
+        <br>
+        <input type="text" name="IDCodice">
+        <br>
+      </fieldset>
+      <br>
+      <input type="text" name="CodiceFiscale">
+      <br>
+      <fielset>
+        <legend>Anagrafica</legend>
+        <input type="text" name="Denominazione">
+      <br>
+      <input type="text" name="Nome">
+      <br>
+      <input type="text" name="Cognome">
+      <br>
+      </fielset>
+      <input type="text" name="Titolo">
+      <br>
+      <input type="text" name="CodEORI">
+      <br>
+    </fieldset>
     <br>
   </fieldset>
   <br>
+  <fieldset>
+    <legend>CessionarioCommittente</legend>
     <fieldset>
-      ><legend>Dati beni e servizi</legend>
-      <div class="container">
-        <table id="product-table" class=" table order-list">
-        <thead>
-            <tr>
-                <td>Descrizione</td>
-                <td>Prezzo unitario</td>
-                <td>Prezzo totale</td>
-                <td>Aliquota (iva)</td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td class="col-sm-4">
-                    <input type="text" name="descrizione" class="form-control" />
-                </td>
-                <td class="col-sm-2">
-                    <input type="number" name="prezzounit"  class="form-control"/>
-                </td>
-                <td class="col-sm-2">
-                    <input type="number" name="prezzotot"  class="form-control"/>
-                </td>
-                <td class="col-sm-2">
-                  <input type="number" name="aliquota"  class="form-control"/>
+      <legend>DatiAnagrafici</legend>
+      <fieldset>
+        <legend>IDFiscaleIva</legend>
+        <input type="text" name="IDPaese">
+        <br>
+        <input type="text" name="IDCodice">
+        <br>
+      </fieldset>
+      <br>
+      <input type="text" name="CodiceFiscale">
+      <br>
+      <fielset>
+        <legend>Anagrafica</legend>
+        <input type="text" name="Denominazione">
+      <br>
+      <input type="text" name="Nome">
+      <br>
+      <input type="text" name="Cognome">
+      <br>
+      </fielset>
+      <input type="text" name="Titolo">
+      <br>
+      <input type="text" name="CodEORI">
+      <br>
+    </fieldset>
+    <br>
+    <fieldset>
+      <legend>Sede</legend>
+      <input type="text" name="Indirizzo">
+      <br>
+      <input type="text" name="NumeroCivico">
+      <br>
+      <input type="number" name="CAP">
+      <br>
+      <input type="text" name="Comune">
+      <br>
+      <input type="text" name="Provincia">
+      <br>
+      <input type="text" name="Nazione">
+      <br>
+    </fieldset>
+    <br>
+    <fieldset>
+      <legend>StabileOrganizzazione</legend>
+      <input type="text" name="Indirizzo">
+      <br>
+      <input type="text" name="NumeroCivico">
+      <br>
+      <input type="number" name="CAP">
+      <br>
+      <input type="text" name="Comune">
+      <br>
+      <input type="text" name="Provincia">
+      <br>
+      <input type="text" name="Nazione">
+      <br>
+    </fieldset>
+    <br>
+    <fieldset>
+      <legend>RappresentanteFiscale</legend>
+      <fieldset>
+        <legend>IDFiscaleIva</legend>
+        <input type="text" name="IDPaese">
+        <br>
+        <input type="text" name="IDCodice">
+        <br>
+      </fieldset>
+      <input type="text" name="Denominazione">
+      <br>
+      <input type="text" name="Nome">
+      <br>
+      <input type="text" name="Cognome">
+      <br>
+    </fieldset>
+    <br>
+  </fieldset>
+  <br>
+  <fieldset>
+    <legend>TerzoIntermediarioOSogg</legend>
+    <fieldset>
+      <legend>DatiAnagrafici</legend>
+      <fieldset>
+        <legend>IDFiscaleIva</legend>
+        <input type="text" name="IDPaese">
+        <br>
+        <input type="text" name="IDCodice">
+        <br>
+      </fieldset>
+      <input type="text" name="CodiceFiscale">
+      <br>
+      <fieldset>
+        <legend>Anagrafica</legend>
+        <input type="text" name="Denominazione">
+        <br>
+        <input type="text" name="Nome">
+        <br>
+        <input type="text" name="Cognome">
+        <br>
+        <input type="text" name="Titolo">
+        <br>
+        <input type="text" name="CodEORI">
+        <br>
+      </fieldset>
+    </fieldset>
+  </fieldset>
+  <br>
+  <input type="text" name="SoggettoEmittente"> 
+  <br>
+  <fieldset>
+    <fieldset>
+      <legend>DatiGenerali</legend>
+      <fieldset>
+        <input type="text" name="Documento">
+        <br>
+        <input type="text" name="Divisa">
+        <br>
+        <input type="date" name="Data">
+        <br>
+        <input type="text" name="Numero">
+        <br>
+        <fieldset>
+          <legend>DatiRitenuta</legend>
+          <input type="text" name="TipoRitenuta">
+          <br>
+          <input type="text" name="ImportoRitenuta">
+          <br>
+          <input type="text" name="AliquotaRitenuta">
+          <br>
+          <input type="text" name="CausalePagamento">
+          <br>
+        </fieldset>
+        <fieldset>
+          <legend>DatiBollo</legend>
+          <input type="text" name="Bollo Virtuale">
+          <br>
+          <input type="text" name="ImportoBollo">
+          <br>
+        </fieldset>
+        <div class="container">
+            <table id="dati-cassa-previdenziale" class=" table order-list">
+            <thead>
+                <tr>
+                    <td>Tipo Cassa</td>
+                    <td>AI Cassa</td>
+                    <td>Importo Contributo Cassa</td>
+                    <td>Imponibile Cassa</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="col-sm-4">
+                        <input type="text" name="TipoCassa" class="form-control" />
+                    </td>
+                    <td class="col-sm-2">
+                        <input type="number" name="AICassa"  class="form-control"/>
+                    </td>
+                    <td class="col-sm-2">
+                        <input type="number" name="ImportoContributoCassa"  class="form-control"/>
+                    </td>
+                    <td class="col-sm-2">
+                      <input type="number" name="ImponibileCassa"  class="form-control"/>
+                    </td>
+                    <td class="col-sm-2"><a class="deleteRow"></a>  
+                    </td>
+                </tr>
+            </tbody>
+            <thead>
+                <tr>
+                    <td>Aliquota IVA</td>
+                    <td>Ritenuta</td>
+                    <td>Natura</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="col-sm-3">
+                        <input type="text" name="AliquotaIva" class="form-control" />
+                    </td>
+                    <td class="col-sm-3">
+                        <input type="number" name="AICassa"  class="form-control"/>
+                    </td>
+                    <td class="col-sm-3">
+                        <input type="number" name="Natura"  class="form-control"/>
+                    </td>
+                </tr>
+            </tbody>
+            <thead>
+                <tr>Riferimento Amministrazione</tr>
+            </thead>
+            <tbody>
+                <td class="col-sm-5">
+                    <input type="text" name="RiferimentoAmministrazione" class="form-control" />
                 </td>
                 <td class="col-sm-2"><a class="deleteRow"></a>  
                 </td>
-            </tr>
-        </tbody>
-        <tfoot>
-            <tr>
-                <td colspan="5" style="text-align: left;">
-                    <input type="button" class="btn btn-lg btn-block " id="addrow" value="Add Row" />
-                </td>
-            </tr>
-            <tr>
-            </tr>
-        </tfoot>
-    </table>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="5" style="text-align: left;">
+                        <input type="button" class="btn btn-lg btn-block " id="addrow" value="Add Row" />
+                    </td>
+                </tr>
+                <tr>
+                </tr>
+            </tfoot>
+        </table>
+        <div class="container">
+            <table id="sconto-maggiorazione" class=" table order-list">
+            <thead>
+                <tr>
+                    <td>Tipo</td>
+                    <td>Percentuale</td>
+                    <td>Importo</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <p>Sconto Maggiorazione</p>
+                    <td class="col-sm-3">
+                        <input type="text" name="Tipo" class="form-control" />
+                    </td>
+                    <td class="col-sm-3">
+                        <input type="number" name="Percentuale"  class="form-control"/>
+                    </td>
+                    <td class="col-sm-3">
+                        <input type="number" name="Importo"  class="form-control"/>
+                    </td>
+                    <td class="col-sm-2"><a class="deleteRow"></a>  
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="5" style="text-align: left;">
+                        <input type="button" class="btn btn-lg btn-block " id="addrow" value="Add Row" />
+                    </td>
+                </tr>
+                <tr>
+                </tr>
+            </tfoot>
+        </table>   
+        <input type="text" name="ImportoTotaleDocumento">
+        <br>
+        <input type="text" name="Arrotondamento">
+        <br>
+        <input type="text" name="Causale">
+        <br>
+        <input type="text" name="Art73">
+        <br>     
+      </fieldset>
+      <fieldset>
+        <legend>FatturaPrincipale</legend>
+      </fieldset>
     </fieldset>
+  </fieldset>
+  <br>
   <input type="submit" value="Invia">
+  <button type="button" onclick="download(this.form)" id="submitButton">Download</button>
 </form> 
 
 </body>
